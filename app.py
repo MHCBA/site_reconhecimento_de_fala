@@ -7,7 +7,7 @@ from wtforms.validators import InputRequired, length, ValidationError
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt()
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:cTI*x64]@localhost/Michell_teste'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://usuario:senha]@localhost/bancodedados'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'chave_secreta'
 
