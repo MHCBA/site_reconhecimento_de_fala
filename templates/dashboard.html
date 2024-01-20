@@ -1,0 +1,26 @@
+{% extends('padrao.html') %}
+{% block content %}
+    <body style="display: flex; flex-direction: column">
+        <h1>Transcritor automatico</h1>
+        <textarea id="texto-transcrito" cols="80" rows="6" placeholder="aperte o botão e fale" name="texto" readonly></textarea>
+        <button style="max-width: 10rem; margin: 2rem 0" id="transcrever"> iniciar</button>
+        <p> Projeto em desenvolvimento</p>
+        by Michell Vasconcelos
+        <script>
+            const caixaTexto = document.getElementById('texto-transcrito');
+            const botaoTranscricao = document.getElementById('transcrever');
+            const reconhecimento = new webkitSpeechRecognition();
+
+
+
+            reconhecimento.onresult = (evento) => {
+                const transcricao = evento.results[0][0].transcript;
+                caixaTexto.innerText = transcricao;
+            }
+
+
+            botaoTranscricao.addEventListener('click', () => reconhecimento.start());
+
+        </script>
+    </body>
+{% endblock %}

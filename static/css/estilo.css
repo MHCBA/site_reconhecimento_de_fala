@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    background-color:darkcyan ;
+    border-style: inset;
+    border-color: darkgray;
+}
+body {
+    background-color: cadetblue;
+    font-style:initial;
+}
+nav {
+    background-color:rgb(130, 249, 249) ;
+    text-align: center;
+    font-style: italic;
+    border-style: inset;
+    border-color: black;
+    margin-top: 0px;
+}
+.paginainicial{
+    text-align: center;
+}
